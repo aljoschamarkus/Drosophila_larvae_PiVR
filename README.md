@@ -3,22 +3,11 @@
 ## Overview
 > Project to analyse and visualise video data of Drosophila melanogaster behavioural experiments. Extracting Basic movement Parameters such as speed and midline offset, as well as Group features such as neighbour distances and encounter Analysis.
 
-
----
-
 ## Project structure
 
-### package (directory)
-collection of modules relevant for the project
 - `config_parameters` contains relevant parameters: video metadata, Arena size, genotypes, plotting choices, etc.
-- `util_data_processing` contains functions to process the raw data and extract the relevant features.
-- `util_plotting` contains functions to plot the data.
-### analysis (directory)
-contains the main scripts to analyse the data
-#### analysis_main (subdirectory)
-reads data, calculation of parameters and plotting
+- `util_data_preperation` contains functions to process the raw data and extract the relevant features.
 - `MAIN_data_preparation.py` reads the raw data (csv), overlays and scales it and saves it into a multi indexed data frame
-- `MAIN_plot.py` enables selection of options and plots the data
 #### bash (subdirectory)
 contains files for the tracking via `TRex` 2 beta software
 - `bash_execute.py` automates the execution of `TRex` via bash scripts
@@ -69,49 +58,6 @@ The csv-files contain the following (relevant) columns:
     - Index names: ['sub_dir', 'condition', 'genotype', 'individual_id', 'frame']
     - Columns: ['midline_offset', 'speed', 'x', 'y', 'midline_offset_signless']
 
-- df_groups.pkl
-    - Index names: ['midline_offset', 'speed', 'x', 'y', 'midline_offset_signless']
-    - Columns: ['midline_offset', 'speed', 'x', 'y', 'midline_offset_signless']
-
 - df_group_parameters.pkl
     - Index names: ['sub_dir', 'condition', 'genotype', 'group_type', 'group_id', 'individual_id', 'frame']
     - Columns: ['midline_offset', 'speed', 'x', 'y', 'midline_offset_signless', 'pairwise_distance', 'nearest_neighbor_distance', 'encounter_count']
----
-
-<!---
-your comment goes here
-and here
----
-### **2. Data Processing** (`process_data.py`)
-```python
-def clean_data(df):
-df.dropna(inplace=True)
-return df
-```
-- Removes missing values from the dataset.
-
-### **3. Visualization** (`plot_results.py`)
-```python
-import matplotlib.pyplot as plt
-def plot_data(df):
-    df.plot(x='Timestamp', y='Measurement 1')
-    plt.show()
-```
-- Plots the first measurement over time.
-
-## How to Use the Code
-Step-by-step guide to running the code.
-
-Example:
-1. Place your input file (`experiment_data.csv`) in the project folder.
-2. Run the main script:
-   ```sh
-python main.py --input experiment_data.csv
-   ```
-3. The output will include:
-    - Processed data in `processed_data.csv`
-          - A graph displayed in a new window.
-
-## Notes
-- If you encounter an error, check the input data format.
--->
