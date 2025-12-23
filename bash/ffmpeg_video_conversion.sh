@@ -3,7 +3,7 @@
 # Set base directory
 base_dir="$1"
 
-find "$base_dir" -type f -name "*.h264" -exec bash -c '
+find "$base_dir" -type f -name "*.h264" -exec bash -c
     video_path="$1"
     dir_path=$(dirname "$video_path")
     video_filename=$(basename "$video_path" .h264)

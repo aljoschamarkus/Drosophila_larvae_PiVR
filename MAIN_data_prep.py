@@ -4,16 +4,15 @@ import numpy as np
 import pandas as pd
 
 from config_settings import bootstrap_reps_p2
-from util_data_preperation import handle_main_dir_p2
-from util_data_preperation import create_mapping_actual_groups
-from util_data_preperation import create_mapping_artificial_groups_bootstrapped
-from util_data_preperation import compute_pairwise_distances_and_encounters
+from util_data_prep import handle_main_dir_p2
+from util_data_prep import create_mapping_actual_groups
+from util_data_prep import create_mapping_artificial_groups_bootstrapped
+from util_data_prep import compute_pairwise_distances_and_encounters
 
 import config_settings
 
-project = 'nompC_10'
-
 # Constants and configuration
+project = 'nompC_10'
 main_dir = "/Users/aljoscha/Downloads/2402_IAVxWT_4min_50p"
 genotype = ["IAVxWT"]
 
