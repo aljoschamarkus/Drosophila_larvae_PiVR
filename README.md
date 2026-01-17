@@ -1,7 +1,7 @@
 # Drosophila larvae data processing
 
 ## Overview
-Data preprocessing of [PiVR](https://pivr.readthedocs.io/en/latest/) video data of *Drosophila melanogaster* behavioural experiments. Extracting movement Parameters such as position, speed and midline offset via TRex as well as further data analysis extracting group features such as neighbour distances and encounter.
+Data preprocessing of [PiVR](https://pivr.readthedocs.io/en/latest/) video data of *Drosophila melanogaster* behavioural experiments. Extracting movement Parameters such as position, speed and midline offset via [TRex](https://trex.run/) as well as further data analysis extracting group features such as neighbour distances and encounter.
 
 ## Requirements
 The video tracking requires the [TRex](https://trex.run/) software (v2.0.0).
