@@ -1,5 +1,8 @@
 # Drosophila larvae data processing
 
+## Requirements
+The video tracking requires the [TRex](https://trex.run/) software (v2.0.0).
+
 ## Usage
 - In [**bash_execute.py**](./bash/bash_execute.py) adjust:
   - `CONDA="..."` conda-based environment management system (e.g. "Users/aljoscha/miniforge3")
@@ -46,7 +49,7 @@ Directory structure required for video conversion and **TRex** tracking. This is
 |   |-[...]
 ```
 ### Preprocessing
-For the further data processing using [**MAIN_data_prep.py**](./MAIN_data_prep.py) data should contain the TRex tracking output (`./data/file_name.csv`, `./sub_sub_dir_name.png`) and be stored in a directory structure as follows:
+For the further data processing using [MAIN_data_prep.py](./MAIN_data_prep.py) data should contain the TRex tracking output (`./data/file_name.csv`, `./sub_sub_dir_name.png`) and be stored in a directory structure as follows:
 - The main directory contains two subdirectories: **sub_dir_groups** and **sub_dir_singles**.
 - Each of these subdirectories contains several sub-subdirectories with the data.
 - The data is stored in a **data** subdirectory within each sub-subdirectory.
