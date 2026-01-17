@@ -4,20 +4,20 @@
 The video tracking requires the [TRex](https://trex.run/) software (v2.0.0).
 
 ## Usage
-- In [**bash_execute.py**](./bash/bash_execute.py) adjust:
+- In [bash_execute.py](./bash/bash_execute.py) adjust:
   - `CONDA="..."` conda-based environment management system (e.g. "Users/aljoscha/miniforge3")
   - `TREX= CONDA + "..."` TRex path (e.g. "/envs/beta/bin/TRex.app/Contents/MacOS/TRex")
   - `MAIN_DIR = '...'` directory containing PiVR data (e.g. "/Users/aljoscha/Downloads/2402_IAVxWT_4min_50p")
-- Run [**bash_execute.py**](./bash/bash_execute.py)
+- Run [bash_execute.py](./bash/bash_execute.py)
 > now each subdirectory contains the with TREX tracked data in csv-files
 
 If further data processing is needed: 
 - Sort individual and group subdirectories in subdirectories whose names contain "group" and "single"
-- In [**MAIN_data_prep.py**](./MAIN_data_prep.py) adjust the following, if unsure look up example in [**config_settings.py**](./config_settings.py):
+- In [MAIN_data_prep.py](./MAIN_data_prep.py) adjust the following, if unsure look up example in [config_settings.py](./config_settings.py):
   - project = "..."
   - main_dir = "..."
   - genotype = [...]
-- Run [**MAIN_data_prep.py**](./MAIN_data_prep.py).
+- Run [MAIN_data_prep.py](./MAIN_data_prep.py).
 
 ## Overview
 > Data preprocessing of PiVR video data of *Drosophila melanogaster* behavioural experiments. Extracting movement Parameters such as position, speed and midline offset via TRex as well as further data analysis extracting group features such as neighbour distances and encounter.
